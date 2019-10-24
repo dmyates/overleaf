@@ -5,7 +5,7 @@ const db = mongojs(Settings.mongo.url, ['users'])
 
 const indexKeys = { 'tokens.readAndWritePrefix': 1 }
 const indexOpts = {
-  unique: true,
+  unique: false,
   partialFilterExpression: {
     'tokens.readAndWritePrefix': { $exists: true }
   },
